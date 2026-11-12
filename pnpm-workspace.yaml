@@ -15,6 +15,11 @@ overrides:
   rolldown: $rolldown
   vite: 'workspace:*'
   debug: 'npm:obug@^1.0.2'
+  '@vue/server-renderer@3.5.34': '3.5.42' # lockwright: GHSA-g2v6-rqmx-r4w6
+  '@vue/server-renderer@3.4.38': '3.5.42' # lockwright: GHSA-g2v6-rqmx-r4w6
+  'baseline-browser-mapping@2.10.27': '2.11.0' # lockwright: GHSA-w5vr-8v7q-w6rv
+  'esbuild@0.27.4': '0.28.1' # lockwright: GHSA-g7r4-m6w7-qqqr
+  'path-to-regexp@6.3.0': '8.4.0' # lockwright: GHSA-27v5-c462-wpq7, GHSA-j3q9-mxjg-w52f
 patchedDependencies:
   "sirv@3.0.2": "patches/sirv@3.0.2.patch"
   "chokidar@3.6.0": "patches/chokidar@3.6.0.patch"
