@@ -15,6 +15,7 @@ overrides:
   rolldown: $rolldown
   vite: 'workspace:*'
   debug: 'npm:obug@^1.0.2'
+  'js-yaml@3.15.2': '4.3.2' # lockwright: GHSA-2883-xcg3-v3hh, GHSA-52cp-r559-cp3m, GHSA-5p4m-2wfm-xmqj, GHSA-h67p-54hq-rp68
 patchedDependencies:
   "sirv@3.0.2": "patches/sirv@3.0.2.patch"
   "chokidar@3.6.0": "patches/chokidar@3.6.0.patch"
