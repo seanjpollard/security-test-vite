@@ -18,6 +18,8 @@ overrides:
   # Volar uses the TypeScript 6 compiler API; its broad optional peer includes TS 7.
   '@volar/typescript>typescript@>=7': '-'
   '@volar/language-service>typescript@>=7': '-'
+  'minimatch@10.2.6': '11.0.1' # lockwright: GHSA-g3hv-75wg-m249
+  'minimatch@9.0.9': '11.0.1' # lockwright: GHSA-g3hv-75wg-m249
 patchedDependencies:
   "sirv@3.0.2": "patches/sirv@3.0.2.patch"
   "chokidar@3.6.0": "patches/chokidar@3.6.0.patch"
