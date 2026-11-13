@@ -174,7 +174,7 @@ packageExtensionsChecksum: sha256-If0sPrN3HV7D+EgeoSZUm8CYcOJOyo0gWobIh2WtTMM=
 patchedDependencies:
   chokidar@3.6.0: e17269188c54412478078f7ac7877c1d5a475a2f2438328e3a7e725513ccbf1f
   dotenv-expand@13.0.0: 49330a663821151418e003e822a82a6a61d2f0f8a6e3cab00c1c94815a112889
-  sirv@3.0.2: c07c56eb72faea34341d465cde2314e89db472106ed378181e3447893af6bf95
+  sirv@3.0.2: bdff24dcf974e66c415307615e28db5fdf44c1b4aba389e84b0e094350655330
 
 importers:
 
@@ -544,7 +544,7 @@ importers:
         version: 1.108.1(source-map-js@1.2.2)
       sirv:
         specifier: ^3.0.2
-        version: 3.0.2(patch_hash=c07c56eb72faea34341d465cde2314e89db472106ed378181e3447893af6bf95)
+        version: 3.0.2(patch_hash=bdff24dcf974e66c415307615e28db5fdf44c1b4aba389e84b0e094350655330)
       std-env:
         specifier: ^4.3.0
         version: 4.3.0
@@ -567,6 +567,9 @@ importers:
       fsevents:
         specifier: ~2.3.3
         version: 2.3.3
+      napi-windows-process-start-time:
+        specifier: ^0.1.0
+        version: 0.1.0
 
   packages/vite/src/node/__tests__:
     dependencies:
@@ -1187,7 +1190,7 @@ importers:
     devDependencies:
       sirv:
         specifier: ^3.0.2
-        version: 3.0.2(patch_hash=c07c56eb72faea34341d465cde2314e89db472106ed378181e3447893af6bf95)
+        version: 3.0.2(patch_hash=bdff24dcf974e66c415307615e28db5fdf44c1b4aba389e84b0e094350655330)
 
   playground/minify:
     dependencies:
@@ -1782,6 +1785,12 @@ importers:
 
   playground/ssr-alias/alias-original: {}
 
+  playground/ssr-bundled-dev:
+    devDependencies:
+      express:
+        specifier: ^5.2.1
+        version: 5.3.0(ms@2.1.3)
+
   playground/ssr-conditions:
     dependencies:
       '@vitejs/test-ssr-conditions-external':
@@ -1796,11 +1805,25 @@ importers:
         version: 5.3.0(ms@2.1.3)
       sirv:
         specifier: ^3.0.2
-        version: 3.0.2(patch_hash=c07c56eb72faea34341d465cde2314e89db472106ed378181e3447893af6bf95)
+        version: 3.0.2(patch_hash=bdff24dcf974e66c415307615e28db5fdf44c1b4aba389e84b0e094350655330)
 
   playground/ssr-conditions/external: {}
 
   playground/ssr-conditions/no-external: {}
+
+  playground/ssr-css:
+    devDependencies:
+      '@vitejs/test-ssr-css-dep':
+        specifier: file:./css-dep
+        version: file:playground/ssr-css/css-dep
+      less:
+        specifier: ^4.9.1
+        version: 4.9.1(ms@2.1.3)
+      sass:
+        specifier: ^1.108.1
+        version: 1.108.1
+
+  playground/ssr-css/css-dep: {}
 
   playground/ssr-deps:
     dependencies:
@@ -5003,6 +5026,9 @@ packages:
   '@vitejs/test-ssr-conditions-no-external@file:playground/ssr-conditions/no-external':
     resolution: {directory: playground/ssr-conditions/no-external, type: directory}
 
+  '@vitejs/test-ssr-css-dep@file:playground/ssr-css/css-dep':
+    resolution: {directory: playground/ssr-css/css-dep, type: directory}
+
   '@vitejs/test-ts-transpiled-exports@file:playground/ssr-deps/ts-transpiled-exports':
     resolution: {directory: playground/ssr-deps/ts-transpiled-exports, type: directory}
 
@@ -6691,6 +6717,12 @@ packages:
     resolution: {integrity: sha512-kVrnsrJqMR8+oLJnGEmSWw9BivK5mt7H3FZatVRjrc5wGqFYuBxX1yG7+A7Gi5AefkX6t/oCkizcQgpu0cY1dQ==}
     engines: {node: ^18 || >=20}
     hasBin: true
+
+  napi-windows-process-start-time@0.1.0:
+    resolution: {integrity: sha512-zHxhzKsIFu3elch3eFw69WEUGc79DFhbc3nD/WEOzWL/pFFLZRW13EHnuO0c+0YjncE5uCaS9ICHxOBXkb6vPw==}
+    engines: {node: '>=20'}
+    cpu: [x64, arm64]
+    os: [win32]
 
   needle@2.9.1:
     resolution: {integrity: sha512-6R9fqJ5Zcmf+uYaFgdIHmLwNldn5HbK8L5ybn7Uz+ylX/rnOsSp1AHcvQSrCaFN+qNM1wpymHqD7mVasEOlHGQ==}
@@ -10560,6 +10592,8 @@ snapshots:
 
   '@vitejs/test-ssr-conditions-no-external@file:playground/ssr-conditions/no-external': {}
 
+  '@vitejs/test-ssr-css-dep@file:playground/ssr-css/css-dep': {}
+
   '@vitejs/test-ts-transpiled-exports@file:playground/ssr-deps/ts-transpiled-exports': {}
 
   '@vitejs/test-worker-dep-cjs@file:playground/worker/dep-cjs': {}
@@ -12374,6 +12408,9 @@ snapshots:
 
   nanoid@5.1.16: {}
 
+  napi-windows-process-start-time@0.1.0:
+    optional: true
+
   needle@2.9.1(ms@2.1.3):
     dependencies:
       debug: obug@1.0.2(ms@2.1.3)
@@ -13299,7 +13336,7 @@ snapshots:
 
   simple-git-hooks@2.14.0: {}
 
-  sirv@3.0.2(patch_hash=c07c56eb72faea34341d465cde2314e89db472106ed378181e3447893af6bf95):
+  sirv@3.0.2(patch_hash=bdff24dcf974e66c415307615e28db5fdf44c1b4aba389e84b0e094350655330):
     dependencies:
       '@polka/url': 1.0.0-next.29
       mrmime: 2.0.1
